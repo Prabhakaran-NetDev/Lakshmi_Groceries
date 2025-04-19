@@ -1,0 +1,536 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7BA0E29F-8C35-452D-8152-794768FA1020}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lakshmi_Groceries</RootNamespace>
+    <AssemblyName>Lakshmi_Groceries</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44386</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Review.aspx" />
+    <Content Include="404.aspx" />
+    <Content Include="about-us.aspx" />
+    <Content Include="assets\css\animate.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\main-color.css" />
+    <Content Include="assets\css\nice-select.css" />
+    <Content Include="assets\css\slick.min.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\biolifebbd0.svg" />
+    <Content Include="assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="assets\images\404-bg.jpg" />
+    <Content Include="assets\images\about-us\bn01.jpg" />
+    <Content Include="assets\images\about-us\bn04.jpg" />
+    <Content Include="assets\images\about-us\double-quotes.png" />
+    <Content Include="assets\images\bg-newsletter.jpg" />
+    <Content Include="assets\images\bg_tab-v1.png" />
+    <Content Include="assets\images\bg_tab-v4.png" />
+    <Content Include="assets\images\bg_tab-v5.png" />
+    <Content Include="assets\images\blogpost\author-02.png" />
+    <Content Include="assets\images\blogpost\author-03.png" />
+    <Content Include="assets\images\blogpost\author.png" />
+    <Content Include="assets\images\blogpost\double-quote.png" />
+    <Content Include="assets\images\blogpost\post-wgt-01.jpg" />
+    <Content Include="assets\images\blogpost\post-wgt-02.jpg" />
+    <Content Include="assets\images\blogpost\post-wgt-03.jpg" />
+    <Content Include="assets\images\blogpost\post_thumbnail.jpg" />
+    <Content Include="assets\images\blogpost\viewer-avt.png" />
+    <Content Include="assets\images\card1.jpg" />
+    <Content Include="assets\images\card2.jpg" />
+    <Content Include="assets\images\card3.jpg" />
+    <Content Include="assets\images\card4.jpg" />
+    <Content Include="assets\images\card5.jpg" />
+    <Content Include="assets\images\color_bg1.jpg" />
+    <Content Include="assets\images\details-product\detail_01.jpg" />
+    <Content Include="assets\images\details-product\detail_02.jpg" />
+    <Content Include="assets\images\details-product\detail_03.jpg" />
+    <Content Include="assets\images\details-product\detail_04.jpg" />
+    <Content Include="assets\images\details-product\detail_05.jpg" />
+    <Content Include="assets\images\details-product\detail_06.jpg" />
+    <Content Include="assets\images\details-product\detail_07.jpg" />
+    <Content Include="assets\images\details-product\p01.jpg" />
+    <Content Include="assets\images\details-product\p02.jpg" />
+    <Content Include="assets\images\details-product\p03.jpg" />
+    <Content Include="assets\images\details-product\p04.jpg" />
+    <Content Include="assets\images\details-product\p05.jpg" />
+    <Content Include="assets\images\details-product\p06.jpg" />
+    <Content Include="assets\images\details-product\p07.jpg" />
+    <Content Include="assets\images\details-product\p08.jpg" />
+    <Content Include="assets\images\details-product\p09.jpg" />
+    <Content Include="assets\images\details-product\thumb_01.jpg" />
+    <Content Include="assets\images\details-product\thumb_02.jpg" />
+    <Content Include="assets\images\details-product\thumb_03.jpg" />
+    <Content Include="assets\images\details-product\thumb_04.jpg" />
+    <Content Include="assets\images\details-product\thumb_05.jpg" />
+    <Content Include="assets\images\details-product\thumb_06.jpg" />
+    <Content Include="assets\images\details-product\thumb_07.jpg" />
+    <Content Include="assets\images\details-product\thumb_p01.jpg" />
+    <Content Include="assets\images\details-product\thumb_p02.jpg" />
+    <Content Include="assets\images\details-product\thumb_p03.jpg" />
+    <Content Include="assets\images\details-product\thumb_p04.jpg" />
+    <Content Include="assets\images\details-product\thumb_p05.jpg" />
+    <Content Include="assets\images\details-product\thumb_p06.jpg" />
+    <Content Include="assets\images\details-product\thumb_p07.jpg" />
+    <Content Include="assets\images\details-product\thumb_p08.jpg" />
+    <Content Include="assets\images\details-product\thumb_p09.jpg" />
+    <Content Include="assets\images\favicon.png" />
+    <Content Include="assets\images\hero_bg.jpg" />
+    <Content Include="assets\images\home-01\bg_bold-title.png" />
+    <Content Include="assets\images\home-01\bg_header-01.png" />
+    <Content Include="assets\images\home-01\bn-promotion-6-child-01.png" />
+    <Content Include="assets\images\home-01\bn-promotion-6-child-02.png" />
+    <Content Include="assets\images\home-01\bn-promotion-6.png" />
+    <Content Include="assets\images\home-01\bn-special-03-sample.jpg" />
+    <Content Include="assets\images\home-01\bn_grid_01.png" />
+    <Content Include="assets\images\home-01\bn_grid_02.png" />
+    <Content Include="assets\images\home-01\bn_grid_03.png" />
+    <Content Include="assets\images\home-01\bn_grid_04.png" />
+    <Content Include="assets\images\home-01\bn_grid_05.png" />
+    <Content Include="assets\images\home-01\bn_grid_06.png" />
+    <Content Include="assets\images\home-01\brd-01.png" />
+    <Content Include="assets\images\home-01\brd-02.png" />
+    <Content Include="assets\images\home-01\brd-03.png" />
+    <Content Include="assets\images\home-01\brd-04.png" />
+    <Content Include="assets\images\home-01\main-slide-01.jpg" />
+    <Content Include="assets\images\home-01\main-slide-02.jpg" />
+    <Content Include="assets\images\home-01\main-slide-03.jpg" />
+    <Content Include="assets\images\home-01\tab-bg-01.png" />
+    <Content Include="assets\images\home-01\tab-bg-02.png" />
+    <Content Include="assets\images\home-01\tab-bg-03.png" />
+    <Content Include="assets\images\home-01\tab-bg-04.png" />
+    <Content Include="assets\images\home-01\thumb-bn-special-02.jpg" />
+    <Content Include="assets\images\home-02\banner-grid-01.jpg" />
+    <Content Include="assets\images\home-02\banner-grid-02.jpg" />
+    <Content Include="assets\images\home-02\banner-grid-03.jpg" />
+    <Content Include="assets\images\home-02\banner-grid-04.jpg" />
+    <Content Include="assets\images\home-02\banner-grid-05.jpg" />
+    <Content Include="assets\images\home-02\banner-grid-06.jpg" />
+    <Content Include="assets\images\home-02\banner-promotion-5.jpg" />
+    <Content Include="assets\images\home-02\bgrd-newsletter.jpg" />
+    <Content Include="assets\images\home-02\bn-promotion5-child1.png" />
+    <Content Include="assets\images\home-02\bn-promotion5-child2.png" />
+    <Content Include="assets\images\home-02\brd-01.jpg" />
+    <Content Include="assets\images\home-02\brd-02.jpg" />
+    <Content Include="assets\images\home-02\brd-03.jpg" />
+    <Content Include="assets\images\home-02\brd-04.jpg" />
+    <Content Include="assets\images\home-02\brd-05.jpg" />
+    <Content Include="assets\images\home-02\instag-inline-01.jpg" />
+    <Content Include="assets\images\home-02\instag-inline-02.jpg" />
+    <Content Include="assets\images\home-02\instag-inline-03.jpg" />
+    <Content Include="assets\images\home-02\instag-inline-04.jpg" />
+    <Content Include="assets\images\home-02\instag-inline-05.jpg" />
+    <Content Include="assets\images\home-02\instag-inline-06.jpg" />
+    <Content Include="assets\images\home-02\instag-inline-07.jpg" />
+    <Content Include="assets\images\home-02\instag-inline-08.jpg" />
+    <Content Include="assets\images\home-02\instag-inline-09.jpg" />
+    <Content Include="assets\images\home-02\instag-inline-10.jpg" />
+    <Content Include="assets\images\home-02\main-slide-01.jpg" />
+    <Content Include="assets\images\home-02\main-slide-02.jpg" />
+    <Content Include="assets\images\home-02\main-slide-03.jpg" />
+    <Content Include="assets\images\home-03\bg_banner_pomotion_org.png" />
+    <Content Include="assets\images\home-03\biolife-banner__style-01.jpg" />
+    <Content Include="assets\images\home-03\bn_special_org.jpg" />
+    <Content Include="assets\images\home-03\brd-01.jpg" />
+    <Content Include="assets\images\home-03\brd-02.jpg" />
+    <Content Include="assets\images\home-03\brd-03.jpg" />
+    <Content Include="assets\images\home-03\brd-04.jpg" />
+    <Content Include="assets\images\home-03\green-slide-01.jpg" />
+    <Content Include="assets\images\home-03\green-slide-02.jpg" />
+    <Content Include="assets\images\home-03\img-moving-pst-1-geen.png" />
+    <Content Include="assets\images\home-03\img-moving-pst-1.png" />
+    <Content Include="assets\images\home-03\img-moving-pst-2.png" />
+    <Content Include="assets\images\home-03\img-moving-pst-3-cut.png" />
+    <Content Include="assets\images\home-03\img-moving-pst-4.png" />
+    <Content Include="assets\images\home-03\post-author.png" />
+    <Content Include="assets\images\home-03\product_deal-02_330x330.jpg" />
+    <Content Include="assets\images\home-03\product_deal-03_330x330.jpg" />
+    <Content Include="assets\images\home-03\product_deal_330x330.jpg" />
+    <Content Include="assets\images\home-03\promotion_bg_green-version.jpg" />
+    <Content Include="assets\images\home-03\slide-01-child-01.png" />
+    <Content Include="assets\images\home-03\slide-01.jpg" />
+    <Content Include="assets\images\home-03\slomotion_02_bg.png" />
+    <Content Include="assets\images\home-04\banner-promotion01.jpg" />
+    <Content Include="assets\images\home-04\bn_promotion-child01-2.png" />
+    <Content Include="assets\images\home-04\bn_promotion-child01.png" />
+    <Content Include="assets\images\home-04\bn_promotion-child02-2.png" />
+    <Content Include="assets\images\home-04\bn_promotion-child02.png" />
+    <Content Include="assets\images\home-04\bn_style02-child.png" />
+    <Content Include="assets\images\home-04\bn_style03-child.png" />
+    <Content Include="assets\images\home-04\bn_style04-child.png" />
+    <Content Include="assets\images\home-04\bn_style05.png" />
+    <Content Include="assets\images\home-04\bn_style06.png" />
+    <Content Include="assets\images\home-04\bn_style07.png" />
+    <Content Include="assets\images\home-04\bn_style08.png" />
+    <Content Include="assets\images\home-04\bn_style09.png" />
+    <Content Include="assets\images\home-04\bn_style10.png" />
+    <Content Include="assets\images\home-04\cat-thumb01.jpg" />
+    <Content Include="assets\images\home-04\cat-thumb02.jpg" />
+    <Content Include="assets\images\home-04\cat-thumb03.jpg" />
+    <Content Include="assets\images\home-04\cat-thumb04.jpg" />
+    <Content Include="assets\images\home-04\light-main_slide_01.jpg" />
+    <Content Include="assets\images\home-04\light-main_slide_02.jpg" />
+    <Content Include="assets\images\home-04\light-main_slide_03.jpg" />
+    <Content Include="assets\images\home-04\main_slide.jpg" />
+    <Content Include="assets\images\home-04\pr-100-01.jpg" />
+    <Content Include="assets\images\home-04\pr-100-02.jpg" />
+    <Content Include="assets\images\home-04\pr-100-03.jpg" />
+    <Content Include="assets\images\home-04\pr-100-04.jpg" />
+    <Content Include="assets\images\home-04\pr-100-05.jpg" />
+    <Content Include="assets\images\home-04\pr-100-06.jpg" />
+    <Content Include="assets\images\home-04\pr-100-07.jpg" />
+    <Content Include="assets\images\home-04\pr-100-08.jpg" />
+    <Content Include="assets\images\home-04\pr-100-09.jpg" />
+    <Content Include="assets\images\home-04\pr-100-10.jpg" />
+    <Content Include="assets\images\home-04\pr-100-11.jpg" />
+    <Content Include="assets\images\home-04\pr-100-12.jpg" />
+    <Content Include="assets\images\home-05\bg-right-follow.jpg" />
+    <Content Include="assets\images\home-05\bn_product-detail.jpg" />
+    <Content Include="assets\images\home-05\bn_style-15.jpg" />
+    <Content Include="assets\images\home-05\bn_style05-2.png" />
+    <Content Include="assets\images\home-05\bn_style06-2.png" />
+    <Content Include="assets\images\home-05\bn_style13-child.png" />
+    <Content Include="assets\images\home-05\bn_style14-child.png" />
+    <Content Include="assets\images\home-05\main-slide-child-01.png" />
+    <Content Include="assets\images\home-05\main-slide.jpg" />
+    <Content Include="assets\images\home-05\media-banner-11.jpg" />
+    <Content Include="assets\images\home-05\media-banner-12.jpg" />
+    <Content Include="assets\images\home-05\testiminal-01.jpg" />
+    <Content Include="assets\images\insta-03.jpg" />
+    <Content Include="assets\images\insta-04.jpg" />
+    <Content Include="assets\images\insta-05.jpg" />
+    <Content Include="assets\images\insta-06.jpg" />
+    <Content Include="assets\images\languages\fr.jpg" />
+    <Content Include="assets\images\languages\ger.jpg" />
+    <Content Include="assets\images\languages\jap.jpg" />
+    <Content Include="assets\images\languages\us.jpg" />
+    <Content Include="assets\images\lmo.png" />
+    <Content Include="assets\images\location-icon.png" />
+    <Content Include="assets\images\Logo_lg.png" />
+    <Content Include="assets\images\megamenu\brand-eco-teas.png" />
+    <Content Include="assets\images\megamenu\brand-explore.png" />
+    <Content Include="assets\images\megamenu\brand-organic-2.png" />
+    <Content Include="assets\images\megamenu\brand-organic.png" />
+    <Content Include="assets\images\megamenu\megamenu-bg-02.jpg" />
+    <Content Include="assets\images\megamenu\thumb-01.jpg" />
+    <Content Include="assets\images\megamenu\thumb-02.jpg" />
+    <Content Include="assets\images\megamenu\thumb-03.jpg" />
+    <Content Include="assets\images\megamenu\thumb-04.jpg" />
+    <Content Include="assets\images\megamenu\thumb-05.jpg" />
+    <Content Include="assets\images\megamenu\thumb-06.jpg" />
+    <Content Include="assets\images\megamenu\thumb-07.jpg" />
+    <Content Include="assets\images\megamenu\v-brand-eco-teas.png" />
+    <Content Include="assets\images\megamenu\v-brand-explore.png" />
+    <Content Include="assets\images\megamenu\v-brand-organic-2.png" />
+    <Content Include="assets\images\megamenu\v-brand-organic.png" />
+    <Content Include="assets\images\megamenu\vegetable-mega-bg.png" />
+    <Content Include="assets\images\minicart\pr-01.jpg" />
+    <Content Include="assets\images\minicart\pr-02.jpg" />
+    <Content Include="assets\images\minicart\pr-03.jpg" />
+    <Content Include="assets\images\minicart\pr-04.jpg" />
+    <Content Include="assets\images\minicart\pr-05.jpg" />
+    <Content Include="assets\images\our-blog\post-thumb-01.jpg" />
+    <Content Include="assets\images\our-blog\post-thumb-02.jpg" />
+    <Content Include="assets\images\our-blog\post-thumb-03.jpg" />
+    <Content Include="assets\images\our-blog\post-thumb-04.jpg" />
+    <Content Include="assets\images\our-blog\post-thumb-05.jpg" />
+    <Content Include="assets\images\our-blog\post-thumb-06.jpg" />
+    <Content Include="assets\images\our-blog\post-thumb-wide-01.jpg" />
+    <Content Include="assets\images\our-blog\post-thumb-wide-02.jpg" />
+    <Content Include="assets\images\products\dummy.png" />
+    <Content Include="assets\images\products\p-01.jpg" />
+    <Content Include="assets\images\products\p-02.jpg" />
+    <Content Include="assets\images\products\p-03.jpg" />
+    <Content Include="assets\images\products\p-04.jpg" />
+    <Content Include="assets\images\products\p-05.jpg" />
+    <Content Include="assets\images\products\p-06.jpg" />
+    <Content Include="assets\images\products\p-07.jpg" />
+    <Content Include="assets\images\products\p-08.jpg" />
+    <Content Include="assets\images\products\p-09.jpg" />
+    <Content Include="assets\images\products\p-10.jpg" />
+    <Content Include="assets\images\products\p-11.jpg" />
+    <Content Include="assets\images\products\p-12.jpg" />
+    <Content Include="assets\images\products\p-13.jpg" />
+    <Content Include="assets\images\products\p-14.jpg" />
+    <Content Include="assets\images\products\p-15.jpg" />
+    <Content Include="assets\images\products\p-16.jpg" />
+    <Content Include="assets\images\products\p-17.jpg" />
+    <Content Include="assets\images\products\p-18.jpg" />
+    <Content Include="assets\images\products\p-19.jpg" />
+    <Content Include="assets\images\products\p-20.jpg" />
+    <Content Include="assets\images\products\p-21.jpg" />
+    <Content Include="assets\images\products\p-22.jpg" />
+    <Content Include="assets\images\products\p-23.jpg" />
+    <Content Include="assets\images\products\p-24.jpg" />
+    <Content Include="assets\images\products\p-25.jpg" />
+    <Content Include="assets\images\products\p-26.jpg" />
+    <Content Include="assets\images\products\p-27.jpg" />
+    <Content Include="assets\images\products\p-28.jpg" />
+    <Content Include="assets\images\products\p-29.jpg" />
+    <Content Include="assets\images\products\p-30.jpg" />
+    <Content Include="assets\images\search-icon.png" />
+    <Content Include="assets\images\shippingcart\pr-01.jpg" />
+    <Content Include="assets\images\shippingcart\pr-02.jpg" />
+    <Content Include="assets\images\top_banner_shopping_cart.png" />
+    <Content Include="assets\js\biolife.framework.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\functions.js" />
+    <Content Include="assets\js\jquery-3.4.1.min.js" />
+    <Content Include="assets\js\jquery.countdown.min.js" />
+    <Content Include="assets\js\jquery.nice-select.min.js" />
+    <Content Include="assets\js\jquery.nicescroll.min.js" />
+    <Content Include="assets\js\slick.min.js" />
+    <Content Include="blog-post.aspx" />
+    <Content Include="checkout.aspx" />
+    <Content Include="blogs.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="forgot-pwd.aspx" />
+    <Content Include="index-2.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="user-details.aspx" />
+    <Content Include="product-list.aspx" />
+    <Content Include="pwd-change.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="shopping-cart.aspx" />
+    <Content Include="single-product.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Review.aspx.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Review.aspx.designer.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="about-us.aspx.cs">
+      <DependentUpon>about-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about-us.aspx.designer.cs">
+      <DependentUpon>about-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog-post.aspx.cs">
+      <DependentUpon>blog-post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blog-post.aspx.designer.cs">
+      <DependentUpon>blog-post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blogs.aspx.cs">
+      <DependentUpon>blogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blogs.aspx.designer.cs">
+      <DependentUpon>blogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgot-pwd.aspx.cs">
+      <DependentUpon>forgot-pwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgot-pwd.aspx.designer.cs">
+      <DependentUpon>forgot-pwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index-2.aspx.cs">
+      <DependentUpon>index-2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index-2.aspx.designer.cs">
+      <DependentUpon>index-2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-details.aspx.cs">
+      <DependentUpon>user-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-details.aspx.designer.cs">
+      <DependentUpon>user-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product-list.aspx.cs">
+      <DependentUpon>product-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product-list.aspx.designer.cs">
+      <DependentUpon>product-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pwd-change.aspx.cs">
+      <DependentUpon>pwd-change.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pwd-change.aspx.designer.cs">
+      <DependentUpon>pwd-change.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shopping-cart.aspx.cs">
+      <DependentUpon>shopping-cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shopping-cart.aspx.designer.cs">
+      <DependentUpon>shopping-cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="single-product.aspx.cs">
+      <DependentUpon>single-product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="single-product.aspx.designer.cs">
+      <DependentUpon>single-product.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\biolifebbd0.eot" />
+    <Content Include="assets\fonts\biolifebbd0.ttf" />
+    <Content Include="assets\fonts\biolifebbd0.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="assets\fonts\fontawesome-webfontd41d.eot" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\Products\flours\" />
+    <Folder Include="assets\Products\fruits\" />
+    <Folder Include="assets\Products\grains\" />
+    <Folder Include="assets\Products\meat\" />
+    <Folder Include="assets\Products\packed_foods\" />
+    <Folder Include="assets\Products\vegetables\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50669</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44386/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
